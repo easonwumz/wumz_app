@@ -37,7 +37,7 @@ dependencies {
     //很强大的一个工具类
     //https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md
     implementation 'com.blankj:utilcode:1.25.5'
-    //butterknife
+    //ButterKnife
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     //权限申请
