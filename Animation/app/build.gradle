@@ -35,6 +35,12 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+    sourceSets{
+        main{
+            jniLibs.srcDirs = ['libs']
+        }
+    }
 }
 
 dependencies {
@@ -59,4 +65,5 @@ dependencies {
     implementation 'com.tbruyelle.rxpermissions:rxpermissions:0.9.1@aar'
     //加载框
     implementation 'com.kaopiz:kprogresshud:1.2.0'
+    implementation files('libs/AMap3DMap_6.9.4_AMapNavi_6.9.1_AMapSearch_6.9.2_AMapLocation_4.7.0_20190831.jar')
 }

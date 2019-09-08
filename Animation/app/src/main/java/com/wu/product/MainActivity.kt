@@ -5,11 +5,10 @@ import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
-import butterknife.BindView
 import com.wu.product.animation.ui.AnimationActivity
 import com.wu.product.base.BaseActivity
-import com.wu.product.customView.CustomViewActivity
 import com.wu.product.customView.ShapeDrawActivity
+import com.wu.product.map.MapActivity
 import com.zhy.adapter.recyclerview.CommonAdapter
 import com.zhy.adapter.recyclerview.MultiItemTypeAdapter
 import com.zhy.adapter.recyclerview.base.ViewHolder
@@ -31,6 +30,7 @@ class MainActivity : BaseActivity(), MultiItemTypeAdapter.OnItemClickListener {
         val list = ArrayList<String>()
         list.add("动画")
         list.add("自定义view")
+        list.add("地图")
 
         recyclerView?.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerView?.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.VERTICAL))
@@ -48,6 +48,7 @@ class MainActivity : BaseActivity(), MultiItemTypeAdapter.OnItemClickListener {
         when (position) {
             0 -> startActivity(AnimationActivity.getLaunchIntent(this))
             1 -> startActivity(ShapeDrawActivity.getLaunchIntent(this))
+            2 -> startActivity(MapActivity.getLaunchIntent(this))
         }
     }
 
